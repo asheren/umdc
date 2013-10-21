@@ -2,16 +2,48 @@
 <html>
 <head>
   <title>Umdc</title>
-  <%= stylesheet_link_tag    "/custom.css.scss", media: "all", "data-turbolinks-track" => true %>
+<!--   <link rel="stylesheet" type="text/css" href="css/quizymemorygame.css" />
+ -->  <%= stylesheet_link_tag    "/custom.css.scss", media: "all", "data-turbolinks-track" => true %>
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
   <div id="container">
   	<div id="user_nav">
-  		<%= link_to "Sign in with Twitter", "/auth/twitter"%>
+  		<% if current_user %>
+  		  Signed in as <%= current_user.name %>
+  		  <%= link_to "Sign out", signout_path %>
+  		<% else %>
+  		  <%= link_to "Sign in with Twitter", "/auth/twitter" %>
+  	  <% end %>
   	</div>
 <%= yield %>
-
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" /></script>
+<script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.8.17/jquery-ui.min.js" /></script>
+<script src="js/jquery.flip.min.js" /></script>
+<script src="js/jquery.quizymemorygame.js" /></script>
+<script src="js/memory.js" /></script>
+<div id="my-memorygame' class='quizy-memorygame">
+  <ul>
+    <li class="match1">
+      Football helmet
+    </li>
+    <li class="match2">
+      denard
+    </li>
+    <li class="match3">
+      Michigan M
+    </li>
+    <li class="match1">
+      Football helmet
+    </li>
+    <li class="match2">
+      denard
+    </li>
+    <li class="match3">
+      Michigan M
+    </li>
+  </ul>
+</div>
 </body>
 </html>

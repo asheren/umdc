@@ -8,8 +8,6 @@ Umdc::Application.routes.draw do
  
  
 
-  resources :users
-
   get 'auth/:provider/callback', to: 'sessions#create'
   get '/signin', to: 'sessions#new', as: 'signin'
   get 'auth/failure', to: redirect('/')

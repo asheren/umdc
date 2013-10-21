@@ -21,6 +21,7 @@ gem 'coffee-rails', '~> 4.0.0'
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
+gem 'jquery-ui-rails'
 
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
 gem 'turbolinks'
@@ -31,11 +32,16 @@ gem 'jbuilder', '~> 1.2'
 #sign in using twitter
 gem 'omniauth-twitter'
 
+#sign in using facebook
+gem 'omniauth-facebook'
+
 group :development, :test do 
 	gem 'thin'
 	# Use sqlite3 as the database for Active Record
   gem 'sqlite3'
   gem 'quiet_assets'
+  gem 'pry-rails'
+  gem 'pry-nav'
 end
 
 group :production do
