@@ -2,7 +2,7 @@ function Card(image) {
 	this.image = image
 	this.order = Math.random() * 1000
 	this.score = 0
-	this.hiddenImage = "/app/images/block m"
+	this.hiddenImage = "/images/block m"
 
 	this.$el = $("<img></img>")
 	             .addClass('card')
@@ -41,7 +41,7 @@ var board = {
 		$("#score").text(0)
 		$("#clicks").text(0)
 
-		$("#images").children("img").each(function()) {
+		$("#images").children("img").each(function() {
 			var image = $(this).attr('src')
 			board.cards.push(new Card(image))
 			board.cards.push(new Card(image))
@@ -70,7 +70,7 @@ var board = {
 		}
 
 		if (selected[0].matches(selected[1])) {
-			selected.forEach(function(card)) {
+			selected.forEach(function(card) {
 				card.changeState('matched')
 				board.updateScore()
 			})
@@ -133,4 +133,3 @@ $(function() {
       })
     }
   })
-})
