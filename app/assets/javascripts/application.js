@@ -13,7 +13,5 @@
 //= require jquery
 //= require jquery.ui.all
 //= require jquery_ujs
-//= require jquery.flip
-//= require jquery.quizymemorygame
 //= require turbolinks
 //= require_tree .

@@ -5,11 +5,50 @@
   <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
   <%= csrf_meta_tags %>
+  <script src="jquery-1.7.1.min.js"></script>
+  <script src="memory.js" /></script>
 </head>
 <body>
 
 <h1>Welcome to UMDC. Play Michigan Memory.</h1>
 <class="image">
+<body>
+  <div id="container">
+  	<div id="user_nav">
+  		<% if current_user %>
+  		  Signed in as <%= current_user.name %>
+  		  <%= link_to "Sign out", signout_path %>
+  		<% else %>
+  		  <%= link_to "Sign in with Twitter", "/auth/twitter" %>
+  	  <% end %>
+  	</div>
+
+  <p class="scoreboard">
+    Score:<span id="score">0</span>
+    Clicks:<span id="clicks">0</span>
+  </p>
+
+
+<div id="board">
+  </div>
+
+  <div id="images" style="display:none">
+    <img src="diagm.jpeg">
+    <img src="michigan words.jpeg">
+    <img src="michiganlogo.jpg">
+    <img src="skinsuit.jpg">
+    <img src="squirrel.jpg">
+    <img src="um_seal.gif">
+    <img src="umlogo.jpg">
+    <img src="wolverine.jpg">
+  </div>
+
+  <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })
+  </script>
 
 <%= yield %>
 
