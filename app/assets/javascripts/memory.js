@@ -2,7 +2,7 @@ function Card(image) {
 	this.image = image
 	this.order = Math.random() * 1000
 	this.score = 0
-	this.hiddenImage = "/images/block m"
+	this.hiddenImage = "block m.jpg"
 
 	this.$el = $("<img></img>")
 	             .addClass('card')
@@ -77,7 +77,7 @@ var board = {
     } else {
     	selected.forEach(function(card) {
     		setTimeout(function() {
-    			card.chageSatte('hidden')
+    			card.chageState('hidden')
     		}, 1000)
     	})
     }

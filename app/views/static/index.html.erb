@@ -2,10 +2,9 @@
 <html>
 <head>
   <title>Welcome To UMDC</title>
-  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+  <%= stylesheet_link_tag    "custom", media: "all", "data-turbolinks-track" => true %>
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
   <%= csrf_meta_tags %>
-  <link rel="stylesheet" type="text/css" href="stylesheets/custom.css.scss">
 
   <script src="/javascripts/memory.js" /></script>
 </head>
@@ -34,14 +33,14 @@
   </div>
 
   <div id="images" style="display:none">
-    <img src="/images/diagm.jpeg" />
-    <img src="/images/michigan words.jpeg">
-    <img src="michiganlogo.jpg">
-    <img src="skinsuit.jpg">
-    <img src="squirrel.jpg">
-    <img src="um_seal.gif">
-    <img src="umlogo.jpg">
-    <img src="wolverine.jpg">
+    <%= image_tag "diagm.jpeg" %>
+    <%= image_tag "michigan words.jpeg" %>
+    <%= image_tag "michiganlogo.jpg" %>
+    <%= image_tag "skinsuit.jpg" %>
+    <%= image_tag "squirrel.jpg" %>
+    <%= image_tag "um_seal.gif" %>
+    <%= image_tag "umlogo.jpg" %>
+    <%= image_tag "Wolverine.jpg" %>
   </div>
 
 <%= yield %>
