@@ -13,5 +13,7 @@
 //= require jquery
 //= require jquery.ui.all
 //= require jquery_ujs
+//= require memory
+//= require jquery.flip
 //= require turbolinks
 //= require_tree .

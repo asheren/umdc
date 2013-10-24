@@ -2,7 +2,7 @@ function Card(image) {
 	this.image = image
 	this.order = Math.random() * 1000
 	this.score = 0
-	this.hiddenImage = "block m.jpg"
+	this.hiddenImage = "http://upload.wikimedia.org/wikipedia/commons/f/fd/000080_Navy_Blue_Square.svg"
 
 	this.$el = $("<img></img>")
 	             .addClass('card')
@@ -77,7 +77,7 @@ var board = {
     } else {
     	selected.forEach(function(card) {
     		setTimeout(function() {
-    			card.chageState('hidden')
+    			card.changeState('hidden')
     		}, 1000)
     	})
     }
@@ -114,10 +114,10 @@ $(function() {
     $("#clicks").text(++current)
   })
 
-  // $("#reset").click(function(event) {
-  //   event.preventDefault();
-  //   board.start()
-  // })
+  $("#reset").click(function(event) {
+    event.preventDefault();
+    board.start()
+  })
 
   // $("#cheat").click(function(event) {
   //   event.preventDefault();
