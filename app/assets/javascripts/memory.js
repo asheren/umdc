@@ -108,7 +108,7 @@ $(function() {
     var card = $(this).data('card')
     if (card.state == 'matched') {
       return;
-    }
+    } 
 
     var current = parseInt($("#clicks").text())
     $("#clicks").text(++current)
@@ -133,3 +133,6 @@ $(function() {
       })
     }
   })
+    
+
+  
