@@ -47,7 +47,7 @@ var board = {
 			board.cards.push(new Card(image))
 		})
 
-    this.cards.sort(function(a,b) {
+    this.cards.sort(function(a, b) {
     	return b.order - a.order;
     })
 
