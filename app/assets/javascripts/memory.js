@@ -2,7 +2,7 @@ function Card(image) {
 	this.image = image
 	this.order = Math.random() * 1000
 	this.score = 0
-	this.hiddenImage = "http://upload.wikimedia.org/wikipedia/commons/f/fd/000080_Navy_Blue_Square.svg"
+	this.hiddenImage = "http://www.sports-logos-screensavers.com/user/Michigan_Wolverines.jpg"
 
 	this.$el = $("<img></img>")
 	             .addClass('card')

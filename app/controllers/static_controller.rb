@@ -7,4 +7,8 @@ class StaticController < ApplicationController
 
   def contact
   end
+
+  # def game_over
+  #   when game_over redirect_to contact
+  # end
 end
