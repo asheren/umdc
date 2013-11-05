@@ -11,7 +11,8 @@ h1 {
 	background-color: DarkBlue;
 	padding: 15px;
 	padding-top: 30px;
-	margin: 10px
+	margin: 10px;
+  width: 700px;
 }
 
 p {
@@ -27,6 +28,10 @@ body {
 footer {
   background-color: #77776e;
   color: #ffffff;
+}
+
+thead {
+  color: black;
 }
 
 btn square {

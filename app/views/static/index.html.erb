@@ -20,7 +20,15 @@
   		  <%= link_to "Sign in with Twitter", "/auth/twitter" %>
   	  <% end %>
   	</div>
-
+  <div id="container">
+    <div id="admin_nav">
+      <% if admin_user %>
+        Signed in as <%= admin_user.name %>
+        <%= link_to "Sign out", signout_path %>
+      <% else %>
+        <%= link_to "Sign in as admin", "/" %> <!-- need to add the right path here -->
+      <% end %>
+    </div>
   <p class="scoreboard">
     Score:<span id="score">0</span>
     Clicks:<span id="clicks">0</span>
@@ -41,7 +49,7 @@
     <%= image_tag "Wolverine.jpg" %>
   </div>
 <div id="btn">
-  <p><%= link_to "If you've completed the game, click here", "static/about" %></p> 
+  <p><%= link_to "If you've completed the game, click here", "/events" %></p> 
 </div>
 <%= yield %>
 

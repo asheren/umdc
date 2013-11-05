@@ -1,6 +1,8 @@
 Umdc::Application.routes.draw do
 
 
+  resources :events
+
   root "static#index"
   get "static/about"
   get "static/contact"

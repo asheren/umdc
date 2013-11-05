@@ -1,0 +1,36 @@
+<h1>Upcoming Events</h1>
+<form action="https://docs.google.com/spreadsheet/ccc?key=0AgZMRjTAAD0_dEgxck9pcFJrWWdpZlNId3E5SlV1b3c&usp=drive_web#gid=0">
+  <!-- looks like this is the actual spreadsheet. I need the actual form. Also not reading this. Make this link  -->
+    <input type="submit" value="Get Involved">
+</form>
+
+<form action="mailto: umdclist@gmail.com">
+    <input type="submit" value="Contact Us">
+</form>
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Description</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @events.each do |event| %>
+      <tr>
+        <td><%= event.name %></td>
+        <td><%= event.description %></td>
+        <td><%= link_to 'Show', event %></td>
+        <td><%= link_to 'Edit', edit_event_path(event) %></td>
+        <td><%= link_to 'Destroy', event, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Event', new_event_path %>
